@@ -1,17 +1,54 @@
 #!/usr/bin/env python3
 
 def admin_login(username, password):
+    if username == "ADMIN" or username == "admin"and password == "12345":
+        return "Access granted"
+    else:
+        return "Access denied"
     # your code here
-    pass
-
+    #pass
 def hows_the_weather(temperature):
+    if temperature < 40:
+        return "It's brisk out there!"
+    elif temperature >= 40 and temperature <= 65:
+        return "It's a little chilly out there!"
+    elif temperature > 85:
+        return "It's too dang hot out there!"
+    else:
+        return "It's perfect out there!"
     # your code here
-    pass
+    #pass
 
 def fizzbuzz(num):
+    if num % 3 == 0 and num % 5 == 0:
+        return "FizzBuzz"
+    elif num % 3 == 0:
+        return "Fizz"
+    elif num % 5 == 0:
+        return "Buzz"
+    else:
+        return num
     # your code here
-    pass
+    #pass
 
 def calculator(operation, num1, num2):
+    if operation not in ("*", "+", "/", "-"):
+        print("Invalid operation!")
+        return None
+    
+    if operation == "*":
+        result = num1 * num2
+    elif operation == "+":
+        result = num1 + num2
+    elif operation == "/":
+        if num2 == 0:  
+            print("Division by zero is not allowed!")
+            return None
+        result = num1 / num2
+    elif operation == "-":
+        result = num1 - num2
+    
+    return result
+
     # your code here
-    pass
+    #pass
